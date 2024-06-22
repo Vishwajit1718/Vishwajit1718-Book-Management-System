@@ -1,0 +1,212 @@
+/* src/styles.css */
+
+/* Reset some basic elements for consistency */
+body, h1, h2, h3, p, ul, li, form, input, button {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Apply a global font and background color */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #9da5ad;
+  color: #333;
+  overflow-x: hidden;
+}
+
+/* Container for the app */
+.app {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #dfd4d4;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  animation: fadeIn 1s ease-in-out;
+  border: 2px solid rgb(59, 55, 55);
+}
+
+/* Main title */
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #f0f6fa;
+  font-size: 2.5em;
+  animation: slideInDown 1s ease-in-out;
+}
+
+/* Form container */
+.book-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.book-form input[type="text"] {
+  padding: 10px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+.book-form button {
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: #343638;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+}
+
+.book-form button:hover {
+  background-color: #5f87b8;
+}
+
+/* List of books */
+.book-list {
+  list-style: none;
+  padding: 0;
+  
+}
+
+/* Individual book item */
+.book {
+  padding: 10px;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #9a9999;
+  transition: background-color 0.3s, transform 0.3s;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.book:hover {
+  background-color: #eef;
+  transform: scale(1.01);
+}
+
+.book h3 {
+  margin: 0;
+  font-size: 1.2em;
+  color: #333333;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+
+.book h4 {
+  margin: 0;
+  color: #2d2b2b;
+}
+  
+
+/* Delete button */
+.book button {
+  background: #dc3545;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.book button:hover {
+  background: #c82333;
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(200, 35, 51, 0.3);
+}
+
+/* Header */
+.header {
+  text-align: center;
+  padding: 20px 0;
+  background: #5b6970;
+  color: white;
+  margin-bottom: 20px;
+  border-radius: 8px 8px 0 0;
+  animation: slideInDown 1s ease-in-out;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2.5em;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 10px 0;
+  background: #f5f5f5;
+  color: rgba(17, 11, 11, 0.595);
+  margin-top: 20px;
+  border-radius: 0 0 8px 8px;
+  animation: slideInUp 1s ease-in-out;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 0.9em;
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInDown {
+  from { transform: translateY(-50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { transform: translateY(50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideInUp {
+  from { transform: translateY(50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .app {
+    margin: 20px;
+    padding: 15px;
+  }
+
+  .book-form {
+    flex-direction: column;
+  }
+
+  .book-form input {
+    margin-right: 0;
+  }
+
+  .book-form button {
+    width: 100%;
+  }
+
+  .book {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .book button {
+    margin-top: 10px;
+    width: 100%;
+  }
+}
